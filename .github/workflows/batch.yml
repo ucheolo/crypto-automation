@@ -12,9 +12,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Clean up outdated dependencies
-        run: npm ci
-
       - name: Checkout 코드
         uses: actions/checkout@v2.5.0
 
