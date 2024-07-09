@@ -13,10 +13,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout 코드
-        uses: actions/checkout@v2
+        uses: actions/checkout@v2.5.0
 
       - name: JDK 17 설정
-        uses: actions/setup-java@v2
+        uses: actions/setup-java@v2.5.1
         with:
             java-version: '17'
             distribution: 'adopt'
@@ -25,7 +25,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Gradle로 빌드
-        run: ./gradlew clean build -x test
+        run: ./gradlew clean build
 
       - name: 배치 실행
         run: java -jar -Dspring.batch.job.names=tickerSlackJob -Dspring.profiles.active=github ./build/libs/crypto-automatioon-0.0.1-SNAPSHOT.jar market=KRW-BTC
