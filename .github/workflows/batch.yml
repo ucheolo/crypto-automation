@@ -23,4 +23,4 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew clean :build -x test
       - name: Run batch
-        run: java -jar -Dspring.batch.job.names=tickerSlackJob ./build/libs/crypto-automatioon-0.0.1-SNAPSHOT.jar market=KRW-BTC
+        run: java -jar -Dspring.batch.job.names=tickerSlackJob -Dspring.profiles.active=github ./build/libs/crypto-automatioon-0.0.1-SNAPSHOT.jar market=KRW-BTC
