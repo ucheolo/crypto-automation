@@ -11,3 +11,5 @@ spring:
   sql:
     init:
       mode: never
+
+      #https://api.slack.com/apps/A07BH00297F/incoming-webhooks?
